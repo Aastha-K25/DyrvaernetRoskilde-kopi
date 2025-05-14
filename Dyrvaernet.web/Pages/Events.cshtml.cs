@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DyrvaernetRoskilde.Pages;
 
-public class Animals : PageModel
+public class Events : PageModel
 {
     public void OnGet()
     {

@@ -7,4 +7,13 @@
         <RootNamespace>DyrvaernetRoskilde</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Dyreinternat.Domain\Dyreinternat.Domain.csproj" />
+      <ProjectReference Include="..\Dyreinternat.Infrastructure\Dyreinternat.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Images\" />
+    </ItemGroup>
+
 </Project>
