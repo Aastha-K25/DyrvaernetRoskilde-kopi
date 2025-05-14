@@ -1,8 +1,8 @@
 @page
-@model DyrvaernetRoskilde.Pages.About
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Om";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +10,48 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="importmap"></script>
-    <title>@ViewData["Title"] Om os </title>
+    <title>@ViewData["Title"] Om </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/About.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Dyreinternat.styles.css" asp-append-version="true" />
 </head>
+
+<div class="section reverse">
+    <img src="Images/img1.png" alt="img1"></img>
+    <h2>Velkommen Til Dyreværnet</h2>
+    <p>
+        Dyreværnet er en dansk dyreværnsorganisation. Vi arbejder for at hjælpe dyr
+        i nød og sikre dem gode og trygge hjem.
+    </p>
+</div>
+
+<div class="section reverse">
+    <img src="Images/img2.png" alt="img2"></img>
+    <h2>Dyreværnets Arbejde</h2>
+    <p>
+        Vores organisation tager imod hjemløse dyr, sørger for deres pleje og finder 
+        nye familier til dem. Derudover arbejder vi med oplysning og forebyggelse
+        af dyremishandling
+    </p>
+</div>
+
+<div class="section reverse">
+    <img src="Images/img3.png" alt="img3"></img>
+    <h2>Hvordan Du Kan Hjælpe</h2>
+    <p>
+        Man kan støtte Dyreværnet ved at donere penge, 
+        adoptere et dyr, blive frivillig eller sprede
+        budskabet om deres arbejde.
+    </p>
+</div>
+
+<div class="section reverse">
+    <img src="Images/img4.png" alt="img4"></img>
+    <h2>Dyreværnet I Samfundet</h2>
+    <p>
+        Vi spiller en vigtig rolle i samfundet ved at tage ansvar for
+        dyrs velfærd og skabe opmærksomhed omkring god dyreomsorg.
+    </p>
+</div>
+
+
