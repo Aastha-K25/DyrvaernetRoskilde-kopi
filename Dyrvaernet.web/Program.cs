@@ -1,10 +1,15 @@
+using Dyreinternat.Domain.Interfaces;
+using Dyreinternat.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var app = builder.Build();
+// 👇 Dette tilføjer dependency injection for dit repository:
+builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
