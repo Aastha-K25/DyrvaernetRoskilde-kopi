@@ -16,16 +16,27 @@
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
 
-<div>
+<div class="title">
     <h1>Aktiviteter</h1>
+    <p>Læs og tilmeld dig aktiviteter, som Roskilde Dyreværnet tilbyder – for både dyr og mennesker.e</p>
+    <hr/>
 </div>
+
 
 @for (int i = 0; i < Model.Events.Count; i++)
 {
-    <div class="box">
-        <h3>@Model.Events[i].Title</h3>
-        <p>@Model.Events[i].Description</p>
-        <p><bolder>Dato:</bolder>@Model.Events[i].Date.ToShortDateString()</p>
-        <a href="/SignUp?EventId=@Model.Events[i].Id">Tilmeld dig</a>
+    <div class="event-card">
+            <div class="event-text">
+                <h3>@Model.Events[i].Title</h3>
+                <p>@Model.Events[i].Description</p>
+                <br/>
+                <p><strong>Dato:</strong>@Model.Events[i].Date.ToShortDateString()</p>
+                <br/>
+                <a href="/SignUp?EventId=@Model.Events[i].Id">Tilmeld dig</a>
+            </div>
+            <div class="event-image">
+                <img src="@Model.Events[i].ImagePath" alt="Billeder af aktiviteterne"/>
+            </div>
     </div>
+    
 }

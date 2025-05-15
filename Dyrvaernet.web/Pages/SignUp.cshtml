@@ -16,12 +16,17 @@
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
 <div>
-    <h2>Tilmeldning til dig</h2>
+    <h2>Tilmeld dig</h2>
     <form method="post">
-        <label for="FullName">Navn:</label>
+        <label for="FullName">Dit fulde navn:</label>
         <input type="text" name="FullName" required/>
+        <br/>
+        <br/>
+        <label for="Email">Din Email</label>
+        <input type="text" name="Email" required></input>
         <input type="hidden" name="EventId" value="@Model.EventId"/>
         <br>
+        <br/>
         <button type ="submit">Tilmeld</button>
     </form>
 </div>
