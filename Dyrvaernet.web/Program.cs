@@ -6,8 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// 👇 Dette tilføjer dependency injection for dit repository:
+
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<ISignUpRepository, SignUpRepository>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

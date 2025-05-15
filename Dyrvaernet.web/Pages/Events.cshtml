@@ -1,5 +1,5 @@
 @page
-@model DyrvaernetRoskilde.Pages.Events
+@model DyrvaernetRoskilde.Web.Pages.EventsModel
 
 @{
     ViewData["Title"] = "Events";
@@ -15,15 +15,17 @@
     <link rel="stylesheet" href="~/css/Events.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
 <div>
-    
+    <h1>Aktiviteter</h1>
 </div>
-</body>
-</html>
+
+@for (int i = 0; i < Model.Events.Count; i++)
+{
+    <div class="box">
+        <h3>Model.Events[i].Title</h3>
+        <p>@Model.Events[i].Description</p>
+        <p><bolder>Dato:</bolder>@Model.Events[i].Date.ToShortDateString()</p>
+        <a href="/SignUp?EventId=@Model.Events[i].Id">Tilmeld dig</a>
+    </div>
+}

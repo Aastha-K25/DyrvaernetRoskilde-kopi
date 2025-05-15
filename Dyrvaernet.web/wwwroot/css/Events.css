@@ -30,3 +30,32 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+.box {
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.1)
+}
+
+.box h3{
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+.box p{
+    margin: 8px 0;
+}
+.box a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #1b6ec2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.box a:hover{
+    background-color: #0a53be;
+}
