@@ -23,7 +23,7 @@
 @for (int i = 0; i < Model.Events.Count; i++)
 {
     <div class="box">
-        <h3>Model.Events[i].Title</h3>
+        <h3>@Model.Events[i].Title</h3>
         <p>@Model.Events[i].Description</p>
         <p><bolder>Dato:</bolder>@Model.Events[i].Date.ToShortDateString()</p>
         <a href="/SignUp?EventId=@Model.Events[i].Id">Tilmeld dig</a>
