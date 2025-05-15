@@ -20,3 +20,4 @@ public class AdoptModel : PageModel
         Animals = _animalRepository.GetAll();
     }
 }
+

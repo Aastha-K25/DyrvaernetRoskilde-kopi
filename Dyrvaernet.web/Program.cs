@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // 👇 Dette tilføjer dependency injection for dit repository:
-builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
+builder.Services.AddScoped<IAdoptRepository, AdoptRepository>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
