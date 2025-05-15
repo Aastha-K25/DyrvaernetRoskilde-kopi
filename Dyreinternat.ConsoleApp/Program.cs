@@ -5,37 +5,31 @@ using Dyreinternat.Domain.Interfaces;
 using Dyreinternat.Infrastructure.Repositories;
 namespace Dyreinternat.ConsoleApp;
 
-
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        IAnimalRepository repository = new AnimalRepository();
-
-        Console.WriteLine("Dyr til adoption:");
-        List<Animal> allAnimals = repository.GetAll();
-
-        for (int i = 0; i < allAnimals.Count; i++)
+        IAdoptRepository repository = new AdoptRepository();
+        List<Adopt> dogs = repository.GetAll();
+        
+        Console.WriteLine("---- Liste over hunde til adoption ----\n"); // Bindestreg = Mellemrum
+        
+        foreach (Adopt Adopt in dogs)
         {
-            Animal a = allAnimals[i];
-            Console.WriteLine(a.Name + " (" + a.Species + "), født: " + a.BirthYear);
-        }
-
-        Animal newAnimal = new Animal();
-        newAnimal.Id = 2;
-        newAnimal.Name = "Luna";
-        newAnimal.Species = "Hund";
-        newAnimal.BirthYear = 2019;
-        newAnimal.ChipNumber = "789012";
-        newAnimal.HealthNotes = "Vaccination";
-        newAnimal.NeedsMedicalAttention = false;
-
-        repository.Add(newAnimal);
-
-        Console.WriteLine("\nOpdateret liste:");
-        foreach (Animal a in repository.GetAll())
-        {
-            Console.WriteLine(a.Name + " (" + a.Species + ")");
+            Console.WriteLine("navn: " + Adopt.Name);
+            Console.WriteLine("Race: " + Adopt.Breed);
+            Console.WriteLine("Farve: " + Adopt.Color);
+            Console.WriteLine("Køn: " + Adopt.Gender);
+            Console.WriteLine("vægt: " + Adopt.Weight + " kg");
+            Console.WriteLine("Alder: " + Adopt.Age + " år");
+            Console.WriteLine("Steriliseret: " + (Adopt.IsSterilized ? "Ja" : "Nej"));
+            Console.WriteLine("Placering: " + Adopt.Location);
+            Console.WriteLine("Gyldig pas: " + (Adopt.HasValidPassport ? "Ja" : "Nej"));
+            Console.WriteLine("Tilgængelig: " + (Adopt.IsAvailable ? "Ja" : "Nej"));
+            Console.WriteLine("billede: " + Adopt.ImageUrl);
+            Console.WriteLine("Book en tid: ring til internatet for mere info");
+            Console.WriteLine("----------------------------------------\n"); // Bindestreg så der er mmellemrum i hvert hund
         }
     }
 }
+
