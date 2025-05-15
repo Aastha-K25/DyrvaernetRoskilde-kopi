@@ -87,7 +87,6 @@ body {
 }
 .card {
   width: 325px;
-  background-color: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -121,16 +120,23 @@ body {
   font-weight: bold;
 }
 
-.container-fluid {
+.footer-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 5px 0;
-  width:50%;
-  float: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 30px;
 }
-.row-cols-sm-2 {
-  justify-content: center;
-  gap: 5px 0;
-  width: 100%;
+.footer-section {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
 }
