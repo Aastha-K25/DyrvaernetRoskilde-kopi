@@ -6,18 +6,19 @@ namespace DyrvaernetRoskilde.Pages;
 
 public class AdoptModel : PageModel
 {
-    private readonly IAnimalRepository _animalRepository;
+    private readonly IAnimalRepository _adoptRepository;
 
     public AdoptModel(IAnimalRepository animalRepository)
     {
-        _animalRepository = animalRepository;
+        _adoptRepository = animalRepository;
     }
 
     public List<Animal> Animals { get; set; }
 
     public void OnGet()
     {
-        Animals = _animalRepository.GetAll();
+        Animals = _adoptRepository.GetAll();
     }
 }
+
 
