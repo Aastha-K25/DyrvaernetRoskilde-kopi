@@ -15,3 +15,13 @@
     <link rel="stylesheet" href="~/css/Adopt.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
+
+<h1>Adopter en hund</h1>
+
+<div class="dog-grid">
+    @foreach (Adopt adopt in Adopts)
+    {
+        <div class="dog-card"></div>
+    }
+</div>
+

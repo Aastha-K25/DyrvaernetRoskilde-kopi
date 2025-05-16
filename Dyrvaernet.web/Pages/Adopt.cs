@@ -1,3 +1,3 @@
 namespace DyrvaernetRoskilde.Pages;
 
-internal class Adopt;
+public class Adopt;
