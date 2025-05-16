@@ -1,8 +1,12 @@
 @page
-@model DyrvaernetRoskilde.Pages.Adopt
+@model DyrvaernetRoskilde.Pages.AdoptModel
+@using System.Collections.Generic
+@using Dyreinternat.Domain.Models
+
 
 @{
-    ViewData["Title"] = "Adopt";
+    ViewData["Title"] = "Adopter en hund";
+    List<Adopt> adopts = Model.Adopt;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +20,27 @@
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
 
+<body>
 <h1>Adopter en hund</h1>
 
 <div class="dog-grid">
-    @foreach (Adopt adopt in Adopts)
+    @foreach (Adopt adopt in adopts)
     {
-        <div class="dog-card"></div>
+        <div class="dog-card">
+            <p><strong>Navn:</strong> @adopt.Name</p>
+            <p><strong>Race:</strong> @adopt.Breed</p>
+            <p><strong>Farve:</strong> @adopt.Color</p>
+            <p><strong>Køn:</strong> @adopt.Gender</p>
+            <p><strong>Vægt:</strong> @adopt.Weight kg</p>
+            <p><strong>Alder:</strong> @adopt.Age år</p>
+            <p><strong>Steriliseret:</strong> @(adopt.IsSterilized ? "Ja" : "Nej")</p>
+            <p><strong>Placering:</strong> @adopt.Location</p>
+            <p><strong>Gyldigt pas:</strong> @(adopt.HasValidPas ? "Ja" : "Nej")</p>
+            <p><strong>Tilgængelig:</strong> @(adopt.IsAvailable ? "Ja" : "Nej")</p>
+            <p><strong>Book en tid:</strong> Kontakt os for at høre mere!<p/>
+        </div>
     }
 </div>
+</body> 
+
 

@@ -75,7 +75,7 @@ namespace Dyreinternat.Infrastructure.Repositories
             }
         };
 
-        public List GetAll()
+        public List<Adopt> GetAll()
         {
             return adopts;
         }
