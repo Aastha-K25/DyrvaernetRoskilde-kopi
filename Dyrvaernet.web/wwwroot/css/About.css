@@ -62,5 +62,63 @@ body {
 }
 
 
+.staff-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5;
+    text-align: center;
+}
 
+.staff-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
 
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.staff-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+/*Respoonsive design*/
+
+@media (max-width: 900px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+}
