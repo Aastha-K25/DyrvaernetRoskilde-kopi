@@ -34,7 +34,7 @@ class Program
         IEventRepository eventRepository = new EventRepository();
         List<Event> events = eventRepository.GetAll();
 
-        Console.WriteLine("--- Kommende aktiviteter hos Dyreværnet ---\n");
+        Console.WriteLine("---Aktiviteter hos Dyreværnet ---\n");
 
         foreach (Event e in events)
         {
