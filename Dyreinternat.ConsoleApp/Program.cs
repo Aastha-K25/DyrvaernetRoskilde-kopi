@@ -28,7 +28,20 @@ class Program
             Console.WriteLine("Tilgængelig: " + (Adopt.IsAvailable ? "Ja" : "Nej"));
             Console.WriteLine("billede: " + Adopt.ImageUrl);
             Console.WriteLine("Book en tid: ring til internatet for mere info");
-            Console.WriteLine("----------------------------------------\n"); // Bindestreg så der er mmellemrum i hvert hund
+            Console.WriteLine("----------------------------------------\n"); // Bindestreg så der er mellemrum i hvert hund
+        }
+        
+        IEventRepository eventRepository = new EventRepository();
+        List<Event> events = eventRepository.GetAll();
+
+        Console.WriteLine("--- Kommende aktiviteter hos Dyreværnet ---\n");
+
+        foreach (Event e in events)
+        {
+            Console.WriteLine("Titel: " + e.Title);
+            Console.WriteLine("Beskrivelse: " + e.Description);
+            Console.WriteLine("Dato: " + e.Date.ToShortDateString());
+            Console.WriteLine("------------------------------------------\n");// Bindestreg så der er mellemrum mellem hver aktivitet
         }
     }
 }
