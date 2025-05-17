@@ -1,5 +1,6 @@
 @page
-@model DyrvaernetRoskilde.Pages.Book
+@using System.Diagnostics
+@model DyrvaernetRoskilde.Pages.BookModel
 
 @{
     ViewData["Title"] = "Book et besøg";
@@ -15,3 +16,29 @@
     <link rel="stylesheet" href="~/css/Book.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DyrvaernetRoskilde.styles.css" asp-append-version="true" />
 </head>
+
+<h2>Book En Tid Til Besøg Hos Os</h2>
+
+<form method="post">
+    <label>Navn Og Efternavn:</label>
+    <input type="text" asp-for="NyBooking.CustomerName" required />
+    
+    <label>Dato Og Tid:</label>
+    <input type ="datetime-local" asp-for="NyBooking.DatoTid" required />
+    
+    <button type="submit">Book Tid</button>
+</form>
+
+<div class="Kontaktinfo">
+    <h3>Kontaktinformation</h3>
+    <p>Email: info@dyrevaernet.dk </p>
+    <p>Telefon: +45 44946695</p>
+</div>
+
+<h3>Eksisterende Bookinger</h3>
+<ul>
+    @foreach (var booking in Model.Books)
+    {
+        <li>@booking.ToString()</li>
+    }
+</ul>
