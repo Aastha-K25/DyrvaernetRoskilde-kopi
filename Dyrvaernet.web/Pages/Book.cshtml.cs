@@ -30,6 +30,6 @@ public class BookModel : PageModel
         NyBooking.Id = nyId;
         _bookRepo.Add(NyBooking);
 
-        return RedirectToPage();
+        return RedirectToPage("BoookingBekraeftelse");
     }
 }

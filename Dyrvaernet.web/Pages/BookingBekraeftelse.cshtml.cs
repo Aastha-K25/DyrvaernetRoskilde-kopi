@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace DyrvaernetRoskilde.Pages;
-
-public class BookingBekraeftelse : PageModel
+namespace DyrvaernetRoskilde.Pages
 {
-    public void OnGet()
+    public class BookingBekraeftelse : PageModel
     {
-        
+        public void OnGet()
+        {
+        }
     }
 }
