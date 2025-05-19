@@ -10,6 +10,7 @@ public class BookModel : PageModel
 {
     private static BookRepository _bookRepo = new BookRepository();
     
+  [BindProperty]  
     public Book NyBooking { get; set; }
     
     public List<Book> Books { get; set; }
@@ -30,6 +31,6 @@ public class BookModel : PageModel
         NyBooking.Id = nyId;
         _bookRepo.Add(NyBooking);
 
-        return RedirectToPage("BoookingBekraeftelse");
+        return RedirectToPage("BookingBekraeftelse");
     }
 }
