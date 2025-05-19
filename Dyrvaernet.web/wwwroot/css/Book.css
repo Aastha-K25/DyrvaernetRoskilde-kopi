@@ -63,9 +63,49 @@ button:hover {
     background-color: #45a049;
 }
 
-.kontaktinfo {
+.Kontaktinfo {
     margin-top: 30px;
     background-color: #e9e9e9;
     padding: 15px;
     border-radius: 10px;
+}
+
+.booking-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.booking-right img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.booking-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.booking-left {
+    flex: 1;
+    max-width: 500px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.booking-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
