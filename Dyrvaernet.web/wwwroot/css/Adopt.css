@@ -56,4 +56,13 @@ body {
 .dog-info p {
     margin: 5px 0;
     font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+.adopt-text h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
 }

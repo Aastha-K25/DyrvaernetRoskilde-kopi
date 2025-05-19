@@ -21,10 +21,13 @@
 </head>
 
 <body>
-<h1>Adopter en hund</h1>
-
+<div class="adopt-text">
+    <h1>Adopter en hund</h1>
+</div>
+<hr/>
+<br/>
 <div class="dog-grid">
-    @foreach (Adopt adopt in adopts)
+    @foreach (Adopt adopt in Model.Adopts)
     {
         <div class="dog-card">
             <p><strong>Navn:</strong> @adopt.Name</p>
@@ -35,12 +38,13 @@
             <p><strong>Alder:</strong> @adopt.Age år</p>
             <p><strong>Steriliseret:</strong> @(adopt.IsSterilized ? "Ja" : "Nej")</p>
             <p><strong>Placering:</strong> @adopt.Location</p>
-            <p><strong>Gyldigt pas:</strong> @(adopt.HasValidPas ? "Ja" : "Nej")</p>
+            <p><strong>Gyldigt pas:</strong> @(adopt.HasValidPassport ? "Ja" : "Nej")</p>
             <p><strong>Tilgængelig:</strong> @(adopt.IsAvailable ? "Ja" : "Nej")</p>
-            <p><strong>Book en tid:</strong> Kontakt os for at høre mere!<p/>
+            <p><strong>Book en tid:</strong> Book en tid hos os for at høre <a href="/Book">mere!</a><p/>
         </div>
     }
 </div>
 </body> 
+
 
 
