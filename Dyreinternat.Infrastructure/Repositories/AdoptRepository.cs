@@ -19,7 +19,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 Gender = "Han",
                 Weight = 16,
                 Age = 4,
-                IsSterilized = true,
+                IsSterilized = false,
                 Location = "Sjælland",
                 HasValidPassport = true,
                 ImageUrl = "/Images/imgg1.png",
@@ -35,7 +35,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 Gender = "Han",
                 Weight = 29,
                 Age = 3,
-                IsSterilized = true,
+                IsSterilized = false,
                 Location = "Sjælland",
                 HasValidPassport = true,
                 ImageUrl = "/Images/imgg2.png",
@@ -51,7 +51,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 Gender = "Hun",
                 Weight = 20,
                 Age = 2,
-                IsSterilized = false,
+                IsSterilized = true,
                 Location = "Sjælland",
                 HasValidPassport = false,
                 ImageUrl = "/Images/imgg3.png",
@@ -71,6 +71,77 @@ namespace Dyreinternat.Infrastructure.Repositories
                 Location = "Sjælland",
                 HasValidPassport = false,
                 ImageUrl = "/Images/imgg4.png",
+                IsAvailable = true
+            },
+            new Adopt
+            {
+                Id = 5,
+                
+                Name = "Newton",
+                Breed = "Huskat",
+                Color = "Brunstribet",
+                Gender = "Han",
+                Weight = 4,
+                Age = 2,
+                IsSterilized = false,
+                Location = "Sjælland",
+                ImageUrl = "/Images/Cat1.png",
+                IsAvailable = true
+            },
+            new Adopt
+            {
+                Id = 6,
+                
+                Name = "Mia",
+                Breed = "British Shorthair",
+                Color = "Silver Tabby",
+                Gender = "Hun",
+                Weight = 4,
+                Age = 3,
+                IsSterilized = true,
+                Location = "Sjælland",
+                ImageUrl = "/Images/Cat2.png",
+                IsAvailable = true
+            },
+            new Adopt
+            {
+                Id = 7,
+                
+                Name = "Ponyo",
+                Breed = "Huskat",
+                Color = "Brun/Gråstribet",
+                Gender = "Hun",
+                Weight = 4,
+                Age = 2,
+                IsSterilized = true,
+                Location = "Sjælland",
+                ImageUrl = "/Images/Cat3.png",
+                IsAvailable = true
+            },
+            new Adopt
+            {
+                Id = 8,
+                
+                Name = "Mynthe",
+                Breed = "Dværgvædder",
+                Color = "Brun/Hvid",
+                Gender = "Hun",
+                Weight = 2,
+                Age = 2,
+                Location = "Sjælland",
+                ImageUrl = "/Images/Kanin.png",
+                IsAvailable = true
+            },
+            new Adopt
+            {
+                Name = "Kinder",
+                Breed = "Dværgvædder",
+                Color = "Hvid/Sort",
+                Gender = "Hun",
+                Weight = 2,
+                Age = 3,
+                Location = "Sjælland",
+                ImageUrl = "/Images/Kanin2.png",
                 IsAvailable = true
             }
         };
