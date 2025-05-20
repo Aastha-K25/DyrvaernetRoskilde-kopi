@@ -6,7 +6,7 @@
 
 @{
     ViewData["Title"] = "Adopter en hund";
-    List<Adopt> adopts = Model.Adopt;
+    List<Adopt> adopts = Model.Adopts;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -26,10 +26,12 @@
 </div>
 <hr/>
 <br/>
+
 <div class="dog-grid">
-    @foreach (Adopt adopt in Model.Adopts)
+    @foreach (Adopt adopt in adopts)
     {
         <div class="dog-card">
+            <img src="@adopt.ImageUrl" alt="Billede af @adopt.Name" class="dog-image" />
             <p><strong>Navn:</strong> @adopt.Name</p>
             <p><strong>Race:</strong> @adopt.Breed</p>
             <p><strong>Farve:</strong> @adopt.Color</p>
@@ -40,7 +42,7 @@
             <p><strong>Placering:</strong> @adopt.Location</p>
             <p><strong>Gyldigt pas:</strong> @(adopt.HasValidPassport ? "Ja" : "Nej")</p>
             <p><strong>Tilgængelig:</strong> @(adopt.IsAvailable ? "Ja" : "Nej")</p>
-            <p><strong>Book en tid:</strong> Book en tid hos os for at høre <a href="/Book">mere!</a><p/>
+            <p><strong>Book en tid:</strong> Book en tid hos os for at høre <a href="/Book">mere!</a></p>   
         </div>
     }
 </div>

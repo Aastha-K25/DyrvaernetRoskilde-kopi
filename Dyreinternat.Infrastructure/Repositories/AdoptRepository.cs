@@ -22,7 +22,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 IsSterilized = true,
                 Location = "Sjælland",
                 HasValidPassport = true,
-                ImageUrl = "Images/imgg1.png",
+                ImageUrl = "/Images/imgg1.png",
                 IsAvailable = true
             },
             new Adopt
@@ -38,7 +38,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 IsSterilized = true,
                 Location = "Sjælland",
                 HasValidPassport = true,
-                ImageUrl = "Images/imgg2.png",
+                ImageUrl = "/Images/imgg2.png",
                 IsAvailable = true
             },
             new Adopt
@@ -54,7 +54,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 IsSterilized = false,
                 Location = "Sjælland",
                 HasValidPassport = false,
-                ImageUrl = "Images/imgg3.png",
+                ImageUrl = "/Images/imgg3.png",
                 IsAvailable = true
             },
             new Adopt
@@ -70,7 +70,7 @@ namespace Dyreinternat.Infrastructure.Repositories
                 IsSterilized = false,
                 Location = "Sjælland",
                 HasValidPassport = false,
-                ImageUrl = "Images/imgg4.png",
+                ImageUrl = "/Images/imgg4.png",
                 IsAvailable = true
             }
         };
