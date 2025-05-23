@@ -13,7 +13,7 @@ namespace Dyreinternat.ConsoleApp
             IAdoptRepository adoptRepository = new AdoptRepository();
             List<Adopt> dogs = adoptRepository.GetAll();
 
-            Console.WriteLine("---- Liste over hunde til adoption ----\n");
+            Console.WriteLine("---- Liste over dyre til adoption ----\n");
 
             foreach (Adopt adopt in dogs)
             {
