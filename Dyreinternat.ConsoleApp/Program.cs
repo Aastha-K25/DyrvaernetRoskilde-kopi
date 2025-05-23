@@ -3,45 +3,77 @@ using System.Collections.Generic;
 using Dyreinternat.Domain.Models;
 using Dyreinternat.Domain.Interfaces;
 using Dyreinternat.Infrastructure.Repositories;
-namespace Dyreinternat.ConsoleApp;
-
-class Program
+namespace Dyreinternat.ConsoleApp
 {
-    static void Main(string[] args)
+    class Program
     {
-        IAdoptRepository repository = new AdoptRepository();
-        List<Adopt> dogs = repository.GetAll();
-        
-        Console.WriteLine("---- Liste over hunde til adoption ----\n"); // Bindestreg = Mellemrum
-        
-        foreach (Adopt Adopt in dogs)
+        static void Main(string[] args)
         {
-            Console.WriteLine("navn: " + Adopt.Name);
-            Console.WriteLine("Race: " + Adopt.Breed);
-            Console.WriteLine("Farve: " + Adopt.Color);
-            Console.WriteLine("Køn: " + Adopt.Gender);
-            Console.WriteLine("vægt: " + Adopt.Weight + " kg");
-            Console.WriteLine("Alder: " + Adopt.Age + " år");
-            Console.WriteLine("Steriliseret: " + (Adopt.IsSterilized ? "Ja" : "Nej"));
-            Console.WriteLine("Placering: " + Adopt.Location);
-            Console.WriteLine("Gyldig pas: " + (Adopt.HasValidPassport ? "Ja" : "Nej"));
-            Console.WriteLine("Tilgængelig: " + (Adopt.IsAvailable ? "Ja" : "Nej"));
-            Console.WriteLine("billede: " + Adopt.ImageUrl);
-            Console.WriteLine("Book en tid: ring til internatet for mere info");
-            Console.WriteLine("----------------------------------------\n"); // Bindestreg så der er mellemrum i hvert hund
-        }
-        
-        IEventRepository eventRepository = new EventRepository();
-        List<Event> events = eventRepository.GetAll();
+            // adoption 
+            IAdoptRepository adoptRepository = new AdoptRepository();
+            List<Adopt> dogs = adoptRepository.GetAll();
 
-        Console.WriteLine("---Aktiviteter hos Dyreværnet ---\n");
+            Console.WriteLine("---- Liste over hunde til adoption ----\n");
 
-        foreach (Event e in events)
-        {
-            Console.WriteLine("Titel: " + e.Title);
-            Console.WriteLine("Beskrivelse: " + e.Description);
-            Console.WriteLine("Dato: " + e.Date.ToShortDateString());
-            Console.WriteLine("------------------------------------------\n");// Bindestreg så der er mellemrum mellem hver aktivitet
+            foreach (Adopt adopt in dogs)
+            {
+                Console.WriteLine("Navn: " + adopt.Name);
+                Console.WriteLine("Race: " + adopt.Breed);
+                Console.WriteLine("Farve: " + adopt.Color);
+                Console.WriteLine("Køn: " + adopt.Gender);
+                Console.WriteLine("Vægt: " + adopt.Weight + " kg");
+                Console.WriteLine("Alder: " + adopt.Age + " år");
+                Console.WriteLine("Steriliseret: " + (adopt.IsSterilized ? "Ja" : "Nej"));
+                Console.WriteLine("Placering: " + adopt.Location);
+                Console.WriteLine("Gyldigt pas: " + (adopt.HasValidPassport ? "Ja" : "Nej"));
+                Console.WriteLine("Tilgængelig: " + (adopt.IsAvailable ? "Ja" : "Nej"));
+                Console.WriteLine("Billede: " + adopt.ImageUrl);
+                Console.WriteLine("----------------------------------------\n");
+            }
+
+            // ktiviteter
+            IEventRepository eventRepository = new EventRepository();
+            List<Event> events = eventRepository.GetAll();
+
+            Console.WriteLine("--- Kommende aktiviteter hos Dyreværnet ---\n");
+
+            foreach (Event e in events)
+            {
+                Console.WriteLine("Titel: " + e.Title);
+                Console.WriteLine("Beskrivelse: " + e.Description);
+                Console.WriteLine("Dato: " + e.Date.ToShortDateString());
+                Console.WriteLine("------------------------------------------\n");
+            }
+
+            // bookinger
+            IBookRepository bookRepository = new BookRepository();
+            List<Book> bookings = bookRepository.GetAll();
+
+            Console.WriteLine("--- Bookinger ---\n");
+
+            foreach (Book book in bookings)
+            {
+                Console.WriteLine("Booking ID: " + book.Id);
+                Console.WriteLine("Kunde: " + book.CustomerName);
+                Console.WriteLine("Tidspunkt: " + book.DatoTid.ToString("g"));
+                Console.WriteLine("------------------------------------------\n");
+            }
+
+            // events ---
+            ISignUpRepository signUpRepository = new SignUpRepository();
+            List<SignUp> signUps = signUpRepository.GetAll();
+
+            Console.WriteLine("--- Tilmeldinger til events ---\n");
+
+            foreach (SignUp signUp in signUps)
+            {
+                Console.WriteLine("Navn: " + signUp.FullName);
+                Console.WriteLine("Tilmeldt Event ID: " + signUp.EventId);
+                Console.WriteLine("------------------------------------------\n");
+            }
+
+            Console.WriteLine("Tryk på en tast for at afslutte.");
+            Console.ReadKey();
         }
     }
 }
