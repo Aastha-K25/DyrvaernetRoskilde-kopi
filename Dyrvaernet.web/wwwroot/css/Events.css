@@ -101,3 +101,44 @@ body {
 .event-card a:hover{
     background-color: #45a049;
 }
+
+.forslag a{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.forslag a:hover{
+    background-color: #45a049;
+}
+
+.input-forslag {
+        background-color: #4CAF50;
+        padding: 30px;
+        max-width: 400px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1)
+}
+.input-forslag h2 {
+        text-align: center;
+        margin-bottom: 16px;
+        color: #ffffff;
+}
+
+.input-forslag button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.input-forslag button:hover {
+        background-color: #45a049;
+    }
