@@ -8,7 +8,7 @@ public class SignUpRepository : ISignUpRepository
 {
     private static readonly List<SignUp> SignUps = new List<SignUp>();
 
-    public void Add(SignUp signUp)
+g    public void Add(SignUp signUp)
     {
         SignUps.Add(signUp);
     }
