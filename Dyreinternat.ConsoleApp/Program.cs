@@ -30,21 +30,7 @@ namespace Dyreinternat.ConsoleApp
                 Console.WriteLine("Billede: " + adopt.ImageUrl);
                 Console.WriteLine("----------------------------------------\n");
             }
-
-            // ktiviteter
-            IEventRepository eventRepository = new EventRepository();
-            List<Event> events = eventRepository.GetAll();
-
-            Console.WriteLine("--- Kommende aktiviteter hos Dyreværnet ---\n");
-
-            foreach (Event e in events)
-            {
-                Console.WriteLine("Titel: " + e.Title);
-                Console.WriteLine("Beskrivelse: " + e.Description);
-                Console.WriteLine("Dato: " + e.Date.ToShortDateString());
-                Console.WriteLine("------------------------------------------\n");
-            }
-
+            
             // bookinger
             IBookRepository bookRepository = new BookRepository();
             List<Book> bookings = bookRepository.GetAll();
@@ -59,7 +45,20 @@ namespace Dyreinternat.ConsoleApp
                 Console.WriteLine("------------------------------------------\n");
             }
 
-            // events ---
+            // Aktiviteter
+            IEventRepository eventRepository = new EventRepository();
+            List<Event> events = eventRepository.GetAll();
+
+            Console.WriteLine("--- Kommende aktiviteter hos Dyreværnet ---\n");
+
+            foreach (Event e in events)
+            {
+                Console.WriteLine("Titel: " + e.Title);
+                Console.WriteLine("Beskrivelse: " + e.Description);
+                Console.WriteLine("Dato: " + e.Date.ToShortDateString());
+                Console.WriteLine("------------------------------------------\n");
+            }
+            // events tilmelding---
             ISignUpRepository signUpRepository = new SignUpRepository();
             List<SignUp> signUps = signUpRepository.GetAll();
 
