@@ -10,3 +10,6 @@ namespace Dyreinternat.Domain.Interfaces
     }
 }    
     
+    
+    
+    

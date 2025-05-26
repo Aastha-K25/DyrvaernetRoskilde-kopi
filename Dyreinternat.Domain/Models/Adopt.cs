@@ -15,3 +15,6 @@ public class Adopt
     public string ImageUrl { get; set; } // Billede af hunden
     public bool IsAvailable { get; set; } // tilgængelig
 }
+
+
+
