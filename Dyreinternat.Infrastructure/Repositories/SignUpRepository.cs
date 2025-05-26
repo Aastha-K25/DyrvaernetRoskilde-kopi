@@ -16,5 +16,8 @@ public void Add(SignUp signUp)
     public List<SignUp> GetAll()
     {
         return SignUps;
+        
+        
     }
+    
 }

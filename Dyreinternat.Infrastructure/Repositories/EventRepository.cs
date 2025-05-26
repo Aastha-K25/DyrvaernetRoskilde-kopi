@@ -31,7 +31,7 @@ public class EventRepository : IEventRepository
       e3.Title = "Sommerfest";
       e3.Description = "Deltag i vores årlige sommerfest! Uanset om du er besøgende, frivillig eller bare nysgerrig, er du velkommen til en hyggelig dag med dyr, mad og aktiviteter.";
       e3.Date = DateTime.Today.AddDays(3);
-      e3.ImagePath = "/Images/Somms$erfest.png";
+      e3.ImagePath = "/Images/Sommerfest.png";
 
       Event e4 = new Event();
       e4.Id = 4;
